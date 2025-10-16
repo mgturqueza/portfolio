@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Contact Me</h1>
+<p>Reach me on Facebook:</p>
+
+<div class="fb-card">
+  <img src="{{ url_for('static', filename='facebook.png') }}" alt="Facebook Logo" class="fb-logo">
+  <a href="https://www.facebook.com/khate.angel.talledo.buentipo.2025" target="_blank">
+    Visit My Facebook Profile
+  </a>
+</div>
+
+<p>Or chat directly via 
+  <a href="https://m.me/khate.angel.talledo.buentipo.2025" target="_blank">Messenger</a>.
+</p>
+{% endblock %}

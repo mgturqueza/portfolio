@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | My Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="{{ url_for('static', filename='me.png') }}" alt="Profile" class="profile-img">
+      <h2></h2>
+      <p class="subtitle">Web Developer</p>
+    </div>
+
+    <nav class="nav-links">
+      <a href="/" class="{% if title=='Home' %}active{% endif %}">Home</a>
+      <a href="/about" class="{% if title=='About' %}active{% endif %}">About</a>
+      <a href="/projects" class="{% if title=='Projects' %}active{% endif %}">Projects</a>
+      <a href="/contact" class="{% if title=='Contact' %}active{% endif %}">Contact</a>
+    </nav>
+
+    <footer>
+      <p><b>Your Angel</b></p>
+    </footer>
+  </aside>
+
+  <main class="content">
+    {% block content %}{% endblock %}
+  </main>
+
+</div>
+</body>
+</html>
